@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCOLO DEL FATTORE DI RISCHIO</title>
+    <style>
+        /* RESET BASE PER EVITARE CHE I BROWSER APPLICANO STILI PREDEFINITI */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;  /* IMPOSTA IL TIPO DI CARATTERE PER TUTTO IL TESTO DELLA PAGINA*/
+            line-height: 1.6;
+            background-color: #f5f5f5;/* IMPOSTA IL COLORE DI SFONDO DELLA PAGINA */
+            color: #333; /* IMPOSTA IL COLORE DEL TESTO PRINCIPALE */
+            padding: 20px; /* AGGIUNGE UNO SPAZIO TRA IL BORDO DELLA PAGINA E IL CONTENUTO */
+        }
+        
+        /* LAYOUT PRINCIPALE */
+        .container {
+            max-width: 800px; /* IMPOSTA LA LARGHEZZA MASSIMA DEL CONTAINER */
+            margin: 0 auto; /* CENTRA ORIZZONTALMENTE IL CONTAINER NELLA PAGINA */
+            padding: 30px;
+            background-color: #fff; /* IMPOSTA IL COLORE DELLO SFONDO DEL CONTAINER */
+            border-radius: 10px; /* ARROTONDA GLI ANGOLI  */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* AGGIUNGE UN'OMBRA */
+        }
+        
+        /* STILE DELL'ELEMENTO H1 ,QUINDI DEL TITOLO */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            position: relative; /* IMPOSTA IL POSIZIONAMENTO RELATIVO PER L'H1, PERMETTENDO ALLO PSEUDO ELEMENTO ::after DI ESSERE POSIZIONATO SOLO SULL'ELEMENTO H1 */
+        }
+        
+        h1::after {
+            content: ''; /* PROPRIETA' FONDAMENTALE PER LA VISUALIZZAZIONE */
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* SPOSTA IL PSEUDO ELEMENTO INDIETRO DEL 50% DELLA SUA LARGHEZZA CENTRANDOLA PERFETTAMENTE */
+            width: 100px;
+            height: 2px;
+            background-color: #3498db;
+        }
+        
+        /* SEZIONE INTRODUTTIVA */
+        .introduzione {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .introduzione p {
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* PULSANTE DOWNLOAD */
+        .download-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .download-btn {
+            display: inline-block; /* INLINE : PERMETTE DI STARE SULLA STESSA LINEA DI ALTRI ELEMENTI, BLOCK PERMETTE DI IMPOSTARE TUTTE LE CARATTERISTICHE COME ALTEZZA,PADDING... */
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease; /* AGGIUNGE UN'ANIMAZIONE A TUTTE LE PROPRIETA' (COLORE , TRASFORMAZIONI) */
+            border: 2px solid transparent;
+            cursor: pointer; /* CAMBIA IL CURSORE IN UNA MANINA AL PASSAGGIO DEL MOUSE  */
+            font-size: 16px;
+        }
+        /* STILE PER GLI STATI INTERATTIVI */
+        .download-btn:hover, 
+        .download-btn:focus {
+            background-color: #2980b9;
+            transform: translateY(-2px); /* CREA UN EFFETTO DI SOLLEVAMENTO , SIMULANDO UN BOTTONE FISICO  */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* MEDIA QUERIES PER RESPONSIVE */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .download-btn {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- TITOLO PRINCIPALE -->
+        <h1>CALCOLO DEL FATTORE DI RISCHIO</h1>
+        
+        <!-- SEZIONE INTRODUTTIVA -->
+        <section class="introduzione">  <!-- RICHIAMO DELLA CLASSE PER ASSOCIARE LO STILE  -->
+            <p>  <!-- TESTO DEL PARAGRAFO  -->
+                
+                 Il presente  documento tecnico illustra la metodologia per il calcolo
+                 del fattore di rischio secondo gli standard ISO e il quadro normativo italiano. 
+                 Attraverso l'analisi di probabilità (P) e danno (D), la guida fornisce strumenti 
+                 operativi per la valutazione del rischio in diversi contesti, con esempi 
+                 applicativi e riferimenti alle direttive del D.lgs. 81/2008.
+            </p>
+        </section>
+        
+        <!-- SEZIONE DOWNLOAD -->
+        <div class="download-container">
+            <a href="https://github.com/Debe00/PW/blob/raw/main/CALCOLO%20DEL%20FATTORE%20DI%20RISCHIO%20(1).pdf" 
+               download 
+               class="download-btn">
+                ↓ Scarica il PDF completo
+            </a>
+        </div>
+    </div>
+</body>
+</html>
